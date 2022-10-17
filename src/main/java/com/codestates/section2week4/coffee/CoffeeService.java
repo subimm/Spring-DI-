@@ -1,9 +1,13 @@
 package com.codestates.section2week4.coffee;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+@Component
 public class CoffeeService {
-
     private static CoffeeRepository coffeeRepository;
     // 생성자를 통한 의존관계 주입
+
+    @Autowired
     public CoffeeService(CoffeeRepository coffeeRepository){
         this.coffeeRepository = coffeeRepository;
     }
